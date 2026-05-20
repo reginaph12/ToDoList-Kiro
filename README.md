@@ -1,6 +1,6 @@
 # Todo List Toicy
 
-Aplikasi manajemen tugas berbasis browser yang dibangun dengan vanilla JavaScript murni. Tidak memerlukan framework atau build tool — cukup buka `index.html` di browser dan langsung berjalan.
+Aplikasi manajemen tugas berbasis browser yang dibangun dengan vanilla JavaScript murni. Tidak memerlukan framework atau build tool, hanya cukup buka `index.html` di browser dan langsung berjalan.
 
 ---
 
@@ -35,7 +35,7 @@ Tidak ada proses build. Buka langsung file HTML di browser:
 Klik dua kali pada file index.html
 ```
 
-Atau gunakan ekstensi Live Server di VS Code untuk pengalaman pengembangan yang lebih baik.
+Atau gunakan ekstensi Live Server di VSCode untuk experience pengembangan yang lebih baik.
 
 ### Instalasi Dependensi (untuk pengujian)
 
