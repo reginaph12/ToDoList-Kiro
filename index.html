@@ -1,91 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todo List Toicy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- App Container -->
-  <div id="app" class="app-container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List Toicy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- App Container -->
+    <div id="app" class="app-container">
+      <!-- Error Banner (hidden by default) -->
+      <div
+        id="error-banner"
+        class="error-banner hidden"
+        role="alert"
+        aria-live="polite"
+      >
+        <span id="error-message" class="error-message"></span>
+        <button
+          id="error-close"
+          class="error-close"
+          aria-label="Tutup pesan error"
+        >
+          &times;
+        </button>
+      </div>
 
-    <!-- Error Banner (hidden by default) -->
-    <div id="error-banner" class="error-banner hidden" role="alert" aria-live="polite">
-      <span id="error-message" class="error-message"></span>
-      <button id="error-close" class="error-close" aria-label="Tutup pesan error">&times;</button>
+      <!-- Header -->
+      <header class="app-header">
+        <h1 class="app-title">Todo List Toicy</h1>
+      </header>
+
+      <!-- Input Section -->
+      <section class="input-section" aria-label="Tambah tugas baru">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="task-input"
+            class="task-input"
+            placeholder="Tambahkan tugas baru..."
+            maxlength="50"
+            aria-label="Deskripsi tugas baru"
+            autocomplete="off"
+          />
+          <button id="add-btn" class="add-btn" aria-label="Tambah tugas">
+            Tambah
+          </button>
+        </div>
+        <p
+          id="input-error"
+          class="input-error hidden"
+          role="alert"
+          aria-live="polite"
+        ></p>
+      </section>
+
+      <!-- Filter Bar -->
+      <nav class="filter-bar" aria-label="Filter tugas">
+        <button
+          id="filter-all"
+          class="filter-btn active"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          Semua
+        </button>
+        <button
+          id="filter-active"
+          class="filter-btn"
+          data-filter="active"
+          aria-pressed="false"
+        >
+          Aktif
+        </button>
+        <button
+          id="filter-completed"
+          class="filter-btn"
+          data-filter="completed"
+          aria-pressed="false"
+        >
+          Selesai
+        </button>
+      </nav>
+
+      <!-- Task List -->
+      <main class="task-list-container">
+        <ul
+          id="task-list"
+          class="task-list"
+          aria-label="Daftar tugas"
+          aria-live="polite"
+        >
+          <!-- Task items rendered here by app.js -->
+        </ul>
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state hidden" aria-live="polite">
+          <p id="empty-message" class="empty-message">
+            Belum ada tugas. Tambahkan tugas pertama Anda!
+          </p>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="app-footer">
+        <button
+          id="clear-completed-btn"
+          class="clear-completed-btn"
+          disabled
+          aria-label="Hapus semua tugas selesai"
+        >
+          Hapus Selesai
+        </button>
+      </footer>
     </div>
 
-    <!-- Header -->
-    <header class="app-header">
-      <h1 class="app-title">Todo List</h1>
-    </header>
-
-    <!-- Input Section -->
-    <section class="input-section" aria-label="Tambah tugas baru">
-      <div class="input-wrapper">
-        <input
-          type="text"
-          id="task-input"
-          class="task-input"
-          placeholder="Tambahkan tugas baru..."
-          maxlength="50"
-          aria-label="Deskripsi tugas baru"
-          autocomplete="off"
-        />
-        <button id="add-btn" class="add-btn" aria-label="Tambah tugas">Tambah</button>
-      </div>
-      <p id="input-error" class="input-error hidden" role="alert" aria-live="polite"></p>
-    </section>
-
-    <!-- Filter Bar -->
-    <nav class="filter-bar" aria-label="Filter tugas">
-      <button
-        id="filter-all"
-        class="filter-btn active"
-        data-filter="all"
-        aria-pressed="true"
-      >Semua</button>
-      <button
-        id="filter-active"
-        class="filter-btn"
-        data-filter="active"
-        aria-pressed="false"
-      >Aktif</button>
-      <button
-        id="filter-completed"
-        class="filter-btn"
-        data-filter="completed"
-        aria-pressed="false"
-      >Selesai</button>
-    </nav>
-
-    <!-- Task List -->
-    <main class="task-list-container">
-      <ul id="task-list" class="task-list" aria-label="Daftar tugas" aria-live="polite">
-        <!-- Task items rendered here by app.js -->
-      </ul>
-      <!-- Empty State -->
-      <div id="empty-state" class="empty-state hidden" aria-live="polite">
-        <p id="empty-message" class="empty-message">Belum ada tugas. Tambahkan tugas pertama Anda!</p>
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="app-footer">
-      <button
-        id="clear-completed-btn"
-        class="clear-completed-btn"
-        disabled
-        aria-label="Hapus semua tugas selesai"
-      >Hapus Selesai</button>
-    </footer>
-
-  </div>
-
-  <script type="module" src="app.js"></script>
-</body>
+    <script type="module" src="app.js"></script>
+    <script type="module" src="test-manual.js"></script>
+  </body>
 </html>
