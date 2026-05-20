@@ -1,6 +1,6 @@
 # Panduan Kontribusi
 
-Terima kasih telah meluangkan waktu untuk berkontribusi pada proyek ini. Dokumen ini menjelaskan semua yang perlu Anda ketahui sebelum mengirimkan perubahan.
+Terima kasih telah meluangkan waktu untuk berkontribusi pada proyek ini.
 
 ---
 
