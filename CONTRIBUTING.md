@@ -331,17 +331,6 @@ Proyek ini berkomitmen untuk menjadi ruang yang aman dan produktif bagi semua ko
 - Hargai waktu reviewer dengan memastikan PR sudah siap sebelum meminta review.
 - Tanggapi komentar review dalam waktu yang wajar. Jika Anda membutuhkan waktu lebih, beri tahu.
 
-### Yang Tidak Ditoleransi
-
-- Komentar yang merendahkan, menyerang, atau bersifat personal.
-- Bahasa yang diskriminatif dalam bentuk apapun.
-- Spam atau permintaan review yang berulang tanpa perubahan substansial.
-- Mengabaikan komentar review tanpa penjelasan.
-
-### Melaporkan Masalah
-
-Jika Anda mengalami atau menyaksikan perilaku yang tidak sesuai, hubungi pengelola proyek secara langsung melalui email atau pesan pribadi. Semua laporan akan ditangani dengan serius dan kerahasiaan.
-
 ---
 
-Sekali lagi, terima kasih atas kontribusi Anda. Setiap perbaikan, sekecil apapun, sangat berarti bagi proyek ini.
+Sekali lagi, terima kasih atas kontribusi Anda dalam proyek ini. Setiap perbaikan dan sekecil apapun sangat berarti bagi proyek saya ini.
